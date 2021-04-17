@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="ad.size" content="width=300,height=250">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Countdown Banner by purplePatch</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;background-size: 100% 100%;background-repeat: no-repeat;user-select: none;}
+        .wrapper{width: 300px;height: 250px;background-image: url("assets/bg.jpg");background-size: 300px 250px;position: relative;cursor: grab;overflow: hidden;}
+        .absolute{position: absolute;}
+        .patch_box{height: 250px;width: 300px;top: 0;left: 0;transition: all 1s ease-in-out;}
+        .patch_countdown {height: 40px;width: 153px;top: 106px;left: 100px;font-size: 30px;color: white;font-weight: 900;text-align: center;line-height: 40px;z-index: 1;}
+        .patch_countdown .hour{left: 0;right: 0;top: 0;bottom: 0;width: 39px;height: 38px;}
+        .patch_countdown .minute{left: 37px;right: 0;top: 0;bottom: 0;width: 38px;height: 38px;}
+        .patch_countdown .second{left: 75px;right: 0;top: 0;bottom: 0;width: 39px;height: 38px;}
+        .patch_title{height: 30px;width: 68px;top: 56px;left: 5px;right: 0px;margin: 0 auto;z-index: 2;}
+        .wrapper .box{right: 7px;width: 67px;height: 25px;bottom: 2px;}
+        .wrapper .text{left: 3px;right: 0px;top: 84px; width: 161px; height: 20px;}
+        .wrapper .timerbg{width: 149px;height: 38px;left: 74px;top: 201px;}
+        .wrapper .logo{right: 10px;bottom: 4px;height: 89px;width: 109px;}
+        .wrapper .product{bottom: -28px;left: -20px;height: 138px;width: 237px;}
+        .patch_note{height: 250px;width: 300px;z-index: 1;}
+        @keyframes pulse {
+            0% {transform: scaleX(1)}
+            50% {transform: scale3d(.95, .95, .95)}
+            to {transform: scaleX(1)}
+        }
+        @keyframes showZoomIn {
+        from {transform: scale3d(.5, .5, .5)}
+        to {transform: scale3d(1, 1, 1)}
+        }
+        @keyframes topBottom {
+        0%,100% {transform: translateY(1px);}
+        50% {transform: translateY(20px);}
+        }
+        .pulse {animation-name: pulse;animation-duration: 2s;animation-iteration-count: infinite;}
+        .showZoomIn {animation-name: showZoomIn;animation-duration: .5s;animation-fill-mode: both}
+        .topBottom {animation-name: topBottom;animation-duration: 3s;animation-fill-mode: both;animation-iteration-count: infinite;}
+    </style>
+</head>
+<body>
+    <a href="{CLICK_MACRO}" target="_blank">
+        <div class="wrapper">
+            <div class="patch_box absolute">
+                <div class="patch_countdown absolute">  </div>
+                <div class="patch_title showZoomIn absolute"><img src="assets/iftar.png" alt=""></div>
+                <div class="product absolute topBottom" ><img src="assets/bottle.png" alt=""></div>
+                <div class="logo pulse absolute"><img src="assets/mnemonic.png" alt=""></div>
+                <div class="patch_note absolute"><img src="assets/frame.png" alt=""></div>
+            </div>
+        </div>
+    </a>
+<script type="text/javascript" src="animation.js"></script>
+</body>
+</html>
